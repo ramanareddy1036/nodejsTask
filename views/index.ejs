@@ -1,0 +1,45 @@
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body class="container">
+    <h1 style="text-align: center;color: red;"><u>Category Data</u></h1>
+    <div class="table-responsive">
+        <table class="table-bordered ">
+            <thead>
+                <th>Catagory Name</th>
+                <th>Category Type</th>
+                <th>Product Count</th>
+            </thead>
+            <tbody>
+                
+                <% data.forEach(function(data){ %>
+                    <tr>
+                    
+                        <td><%= data.type %></td>
+                        <td><%= data.name %></td>
+                        <td><%= data.productCount %></td>
+                    </tr>
+                <% })%>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+<style>
+    .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+        border-bottom-width: 2px;
+        text-align: center;
+    }
+    td, th {
+        padding: 10px;
+    }
+</style>
+</html>
